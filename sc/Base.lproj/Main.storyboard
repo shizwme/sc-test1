@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jj0-kU-eyh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bXC-aF-SS2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -104,6 +105,231 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="696.79999999999995" y="688.60569715142435"/>
+        </scene>
+        <!--买车-->
+        <scene sceneID="WSD-fz-4l2">
+            <objects>
+                <viewController title="买车" id="HpF-q2-caZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zPK-Gb-3eY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sX3-OO-qmP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="买车" image="navi_buycar_no" selectedImage="navi_buycar_yes" id="5Ta-Ld-RQj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eps-ct-KR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-998" y="1424"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="cAB-fA-ZVA">
+            <objects>
+                <viewController title="我的" id="OBE-x0-jHJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6T-gn-ob0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6UO-UH-HW9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的" image="navi_user_no" selectedImage="navi_user_yes" id="nTC-Hg-9PF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzY-Dq-u3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="2529"/>
+        </scene>
+        <!--拍卖-->
+        <scene sceneID="Gi3-ct-jij">
+            <objects>
+                <viewController title="拍卖" id="w99-M2-QKE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rcR-bp-bcq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-4p-hyA" userLabel="专场竞拍iv">
+                                <rect key="frame" x="0.0" y="20" width="124" height="66.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-WR-qJR" userLabel="急速竞拍iv">
+                                <rect key="frame" x="124" y="20" width="124" height="66.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-AM-96d" userLabel="自由出价iv">
+                                <rect key="frame" x="247.5" y="20" width="127.5" height="66.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专场竞拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-31-WeR" userLabel="专场竞拍lab">
+                                <rect key="frame" x="0.0" y="86.5" width="124" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="急速竞拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYR-LM-Lph" userLabel="急速竞拍lab">
+                                <rect key="frame" x="124" y="86.5" width="124" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自由出价" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0U-vq-7xj" userLabel="自由出价lab">
+                                <rect key="frame" x="247.5" y="86.5" width="127.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yCo-dV-6yI" userLabel="车源预告iv">
+                                <rect key="frame" x="0.0" y="120" width="124" height="66.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-qf-KZh" userLabel="成交记录iv">
+                                <rect key="frame" x="124" y="120" width="124" height="66.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gSA-rf-ef2" userLabel="保证金iv">
+                                <rect key="frame" x="247.5" y="120" width="127.5" height="66.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车源预告" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUT-SN-fgL" userLabel="车源预告lab">
+                                <rect key="frame" x="0.0" y="186.5" width="124" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成交记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDc-Lx-OlO" userLabel="成交记录lab">
+                                <rect key="frame" x="124" y="186.5" width="127.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="保证金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-oH-xxl" userLabel="保证金lab">
+                                <rect key="frame" x="247.5" y="186.5" width="127.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s0U-vq-7xj" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.34" id="1T5-I9-5on"/>
+                            <constraint firstItem="Qbh-oH-xxl" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.66" id="2zY-Wt-61i"/>
+                            <constraint firstItem="9TY-4p-hyA" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="4Du-1u-clS"/>
+                            <constraint firstItem="gSA-rf-ef2" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.66" id="5pt-i1-ekE"/>
+                            <constraint firstItem="iU7-WR-qJR" firstAttribute="top" secondItem="xpt-Db-O91" secondAttribute="top" id="7HC-XX-asD"/>
+                            <constraint firstItem="hDc-Lx-OlO" firstAttribute="top" secondItem="VXV-qf-KZh" secondAttribute="bottom" id="7c1-k0-2uo"/>
+                            <constraint firstItem="qE9-AM-96d" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.66" id="7fd-BS-7Jk"/>
+                            <constraint firstItem="yCo-dV-6yI" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="8Gz-xh-EUu"/>
+                            <constraint firstItem="yCo-dV-6yI" firstAttribute="top" secondItem="EAz-31-WeR" secondAttribute="bottom" id="Bhb-TL-uyR"/>
+                            <constraint firstItem="VXV-qf-KZh" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="Cci-YT-SAY"/>
+                            <constraint firstItem="EAz-31-WeR" firstAttribute="top" secondItem="9TY-4p-hyA" secondAttribute="bottom" id="E50-NM-7b0"/>
+                            <constraint firstItem="Qbh-oH-xxl" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.05" id="EhI-k9-HkW"/>
+                            <constraint firstItem="yCo-dV-6yI" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="leading" id="FIP-zz-z4L"/>
+                            <constraint firstItem="kUT-SN-fgL" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="FpZ-Ke-hLV"/>
+                            <constraint firstItem="gSA-rf-ef2" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.34" id="KRh-YC-CB3"/>
+                            <constraint firstItem="hDc-Lx-OlO" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.33" id="KSO-ck-XeR"/>
+                            <constraint firstItem="hDc-Lx-OlO" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.05" id="L4C-Vi-Jae"/>
+                            <constraint firstItem="EAz-31-WeR" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.05" id="MnX-Iz-2Zw"/>
+                            <constraint firstItem="VXV-qf-KZh" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.33" id="NjN-vB-iOL"/>
+                            <constraint firstItem="qE9-AM-96d" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.34" id="OLD-a2-W7Y"/>
+                            <constraint firstItem="9TY-4p-hyA" firstAttribute="top" secondItem="xpt-Db-O91" secondAttribute="top" id="PQV-HT-otr"/>
+                            <constraint firstItem="qE9-AM-96d" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="QSB-yN-qDs"/>
+                            <constraint firstItem="9TY-4p-hyA" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="Rg2-th-Pi7"/>
+                            <constraint firstItem="gSA-rf-ef2" firstAttribute="top" secondItem="s0U-vq-7xj" secondAttribute="bottom" id="XP6-ZY-YQm"/>
+                            <constraint firstItem="iU7-WR-qJR" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="ZG6-kC-Iin"/>
+                            <constraint firstItem="VXV-qf-KZh" firstAttribute="top" secondItem="nYR-LM-Lph" secondAttribute="bottom" id="a4z-sH-Tac"/>
+                            <constraint firstItem="gSA-rf-ef2" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="a5N-Py-qaK"/>
+                            <constraint firstItem="qE9-AM-96d" firstAttribute="top" secondItem="xpt-Db-O91" secondAttribute="top" id="adT-pL-Gcv"/>
+                            <constraint firstItem="Qbh-oH-xxl" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.34" id="b3X-9c-KDA"/>
+                            <constraint firstItem="nYR-LM-Lph" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="biI-ui-CdK"/>
+                            <constraint firstItem="kUT-SN-fgL" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="leading" id="fcC-aH-Tdr"/>
+                            <constraint firstItem="9TY-4p-hyA" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="leading" id="gsz-bF-JVj"/>
+                            <constraint firstItem="yCo-dV-6yI" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="ibO-IP-zta"/>
+                            <constraint firstItem="kUT-SN-fgL" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.05" id="igL-KD-39F"/>
+                            <constraint firstItem="EAz-31-WeR" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="leading" id="jL0-ML-uuj"/>
+                            <constraint firstItem="s0U-vq-7xj" firstAttribute="top" secondItem="qE9-AM-96d" secondAttribute="bottom" id="mJe-I1-f1R"/>
+                            <constraint firstItem="s0U-vq-7xj" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.66" id="mYF-kX-2u8"/>
+                            <constraint firstItem="iU7-WR-qJR" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.33" id="n0j-mT-xRv"/>
+                            <constraint firstItem="nYR-LM-Lph" firstAttribute="top" secondItem="iU7-WR-qJR" secondAttribute="bottom" id="nkf-oc-hxf"/>
+                            <constraint firstItem="iU7-WR-qJR" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="pJc-6N-wBJ"/>
+                            <constraint firstItem="s0U-vq-7xj" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.05" id="qor-kz-OD6"/>
+                            <constraint firstItem="VXV-qf-KZh" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="sVv-e3-EK1"/>
+                            <constraint firstItem="Qbh-oH-xxl" firstAttribute="top" secondItem="gSA-rf-ef2" secondAttribute="bottom" id="slo-y3-cY8"/>
+                            <constraint firstItem="EAz-31-WeR" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="ufT-Ie-n3T"/>
+                            <constraint firstItem="hDc-Lx-OlO" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.34" id="uyn-lb-cV5"/>
+                            <constraint firstItem="nYR-LM-Lph" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.33" id="yCp-NY-JOH"/>
+                            <constraint firstItem="nYR-LM-Lph" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.05" id="yf3-wM-CZd"/>
+                            <constraint firstItem="kUT-SN-fgL" firstAttribute="top" secondItem="yCo-dV-6yI" secondAttribute="bottom" id="zTX-Oa-HG7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xpt-Db-O91"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="拍卖" image="navi_auction_no" selectedImage="navi_auction_yes" id="115-wd-RzH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xq-D3-I8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="2103.5982008995502"/>
+        </scene>
+        <!--卖车-->
+        <scene sceneID="K2p-RS-2rv">
+            <objects>
+                <viewController title="卖车" id="cGd-g4-Lkr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y3W-ii-5Ff">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fxg-y4-CSE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="卖车" image="navi_sale_car_no" selectedImage="navi_sale_car_yes" id="Ovm-qy-hO4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Gm-UU-hHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-999" y="2104"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="ZGk-zD-HBV">
+            <objects>
+                <viewController title="首页" id="icC-bA-xBy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQI-Ad-6vu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vaM-sg-9NP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="navi_home_no" selectedImage="navi_home_yes" id="K8b-oh-Xyl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kj1-AD-YF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="1424"/>
+        </scene>
+        <!--主窗口-->
+        <scene sceneID="TW7-CS-2oJ">
+            <objects>
+                <tabBarController title="主窗口" id="bXC-aF-SS2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JTq-go-WRO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="icC-bA-xBy" kind="relationship" relationship="viewControllers" id="f3H-mr-dpb"/>
+                        <segue destination="w99-M2-QKE" kind="relationship" relationship="viewControllers" id="8My-lg-En1"/>
+                        <segue destination="HpF-q2-caZ" kind="relationship" relationship="viewControllers" id="pbi-TG-bQX"/>
+                        <segue destination="cGd-g4-Lkr" kind="relationship" relationship="viewControllers" id="8VU-ko-Xo1"/>
+                        <segue destination="OBE-x0-jHJ" kind="relationship" relationship="viewControllers" id="UrN-1w-x92"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvI-8I-Edx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="1706"/>
         </scene>
         <!--注册-->
         <scene sceneID="LWe-x8-3TW">
@@ -239,4 +465,16 @@
             <point key="canvasLocation" x="21.600000000000001" y="688.60569715142435"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="navi_auction_no" width="30" height="30"/>
+        <image name="navi_auction_yes" width="30" height="30"/>
+        <image name="navi_buycar_no" width="30" height="30"/>
+        <image name="navi_buycar_yes" width="30" height="30"/>
+        <image name="navi_home_no" width="30" height="30"/>
+        <image name="navi_home_yes" width="30" height="30"/>
+        <image name="navi_sale_car_no" width="30" height="30"/>
+        <image name="navi_sale_car_yes" width="30" height="30"/>
+        <image name="navi_user_no" width="30" height="30"/>
+        <image name="navi_user_yes" width="30" height="30"/>
+    </resources>
 </document>
