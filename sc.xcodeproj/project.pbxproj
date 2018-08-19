@@ -25,7 +25,7 @@
 		04D02F432123F1B3004EF8C4 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D02F412123F1B3004EF8C4 /* MOBFoundation.framework */; };
 		04D02F462123F24B004EF8C4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D02F452123F24B004EF8C4 /* libz.tbd */; };
 		04D02F482123F271004EF8C4 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D02F472123F271004EF8C4 /* libstdc++.tbd */; };
-		04D02F4D21241D12004EF8C4 /* AuctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D02F4C21241D12004EF8C4 /* AuctionViewController.swift */; };
+		04D02F4F2129AC37004EF8C4 /* AuctionNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D02F4E2129AC37004EF8C4 /* AuctionNavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +123,7 @@
 		04D02F412123F1B3004EF8C4 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		04D02F452123F24B004EF8C4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		04D02F472123F271004EF8C4 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		04D02F4C21241D12004EF8C4 /* AuctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionViewController.swift; sourceTree = "<group>"; };
+		04D02F4E2129AC37004EF8C4 /* AuctionNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,7 +259,7 @@
 		04D02F4B21241CA6004EF8C4 /* auction */ = {
 			isa = PBXGroup;
 			children = (
-				04D02F4C21241D12004EF8C4 /* AuctionViewController.swift */,
+				04D02F4E2129AC37004EF8C4 /* AuctionNavViewController.swift */,
 			);
 			path = auction;
 			sourceTree = "<group>";
@@ -399,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D02F4F2129AC37004EF8C4 /* AuctionNavViewController.swift in Sources */,
 				04B978DC2122E8CD0054D708 /* LoginViewController.swift in Sources */,
 				04B978DE2122E8E10054D708 /* RegisterViewController.swift in Sources */,
 				04C1F2EB212329E2006F6D7A /* AppConstant.swift in Sources */,
@@ -407,7 +408,6 @@
 				04D02F332123E2D3004EF8C4 /* NSObject+MD5Util.m in Sources */,
 				04C1F2A12123098B006F6D7A /* RegexUtil.swift in Sources */,
 				04B978CF2122C9C90054D708 /* sc.xcdatamodeld in Sources */,
-				04D02F4D21241D12004EF8C4 /* AuctionViewController.swift in Sources */,
 				04B978C72122C9C90054D708 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

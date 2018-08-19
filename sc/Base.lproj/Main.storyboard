@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bXC-aF-SS2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jj0-kU-eyh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,13 +20,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登  陆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfU-6i-i4W">
-                                <rect key="frame" x="24" y="176" width="327" height="21"/>
+                                <rect key="frame" x="24" y="154" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码(6-16位)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PXR-wp-XQO">
-                                <rect key="frame" x="24" y="350.5" width="327" height="30"/>
+                                <rect key="frame" x="24" y="328.5" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
@@ -35,13 +35,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="忘记密码?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAa-86-WG8">
-                                <rect key="frame" x="24" y="405" width="327" height="15"/>
+                                <rect key="frame" x="24" y="383" width="327" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0p0-K1-Dzp">
-                                <rect key="frame" x="24" y="444" width="327" height="30"/>
+                                <rect key="frame" x="24" y="422" width="327" height="30"/>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16o-Ci-KJZ">
-                                <rect key="frame" x="24" y="522" width="327" height="27"/>
+                                <rect key="frame" x="24" y="500" width="327" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="还没有账号? 点此注册 &gt;&gt;">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GSd-xh-kSM">
-                                <rect key="frame" x="24" y="296.5" width="327" height="30"/>
+                                <rect key="frame" x="24" y="274.5" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" textContentType="tel"/>
@@ -141,22 +141,30 @@
         <!--拍卖-->
         <scene sceneID="Gi3-ct-jij">
             <objects>
-                <viewController title="拍卖" id="w99-M2-QKE" sceneMemberID="viewController">
+                <viewController title="拍卖" id="w99-M2-QKE" customClass="AuctionNavViewController" customModule="sc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rcR-bp-bcq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-4p-hyA" userLabel="专场竞拍iv">
-                                <rect key="frame" x="0.0" y="20" width="124" height="66.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auction_special_auction" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-4p-hyA" userLabel="专场竞拍iv">
+                                <rect key="frame" x="0.0" y="64" width="124" height="66.5"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-WR-qJR" userLabel="急速竞拍iv">
-                                <rect key="frame" x="124" y="20" width="124" height="66.5"/>
+                            <imageView multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="ivFastAuction" image="auction_fast_auction" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-WR-qJR" userLabel="急速竞拍iv">
+                                <rect key="frame" x="124" y="64" width="124" height="66.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ivFastAuction">
+                                    <accessibilityTraits key="traits" button="YES" image="YES" allowsDirectInteraction="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ZW9-kN-a3D" appends="YES" id="tEg-cO-gke"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-AM-96d" userLabel="自由出价iv">
-                                <rect key="frame" x="247.5" y="20" width="127.5" height="66.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auction_free_bid" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-AM-96d" userLabel="自由出价iv">
+                                <rect key="frame" x="247.5" y="64" width="127.5" height="66.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专场竞拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-31-WeR" userLabel="专场竞拍lab">
-                                <rect key="frame" x="0.0" y="86.5" width="124" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专场竞拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-31-WeR" userLabel="专场竞拍lab">
+                                <rect key="frame" x="0.0" y="130.5" width="124" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -164,17 +172,21 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="急速竞拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYR-LM-Lph" userLabel="急速竞拍lab">
-                                <rect key="frame" x="124" y="86.5" width="124" height="33.5"/>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="急速竞拍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYR-LM-Lph" userLabel="急速竞拍lab">
+                                <rect key="frame" x="124" y="130.5" width="124" height="33.5"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uU2-Cm-j4V" appends="YES" id="Qi3-hg-zdq"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自由出价" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0U-vq-7xj" userLabel="自由出价lab">
-                                <rect key="frame" x="247.5" y="86.5" width="127.5" height="33.5"/>
+                                <rect key="frame" x="247.5" y="130.5" width="127.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -182,17 +194,17 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yCo-dV-6yI" userLabel="车源预告iv">
-                                <rect key="frame" x="0.0" y="120" width="124" height="66.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auction_advance_notice" translatesAutoresizingMaskIntoConstraints="NO" id="yCo-dV-6yI" userLabel="车源预告iv">
+                                <rect key="frame" x="0.0" y="164" width="124" height="66.5"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-qf-KZh" userLabel="成交记录iv">
-                                <rect key="frame" x="124" y="120" width="124" height="66.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auction_auctioned_note" translatesAutoresizingMaskIntoConstraints="NO" id="VXV-qf-KZh" userLabel="成交记录iv">
+                                <rect key="frame" x="124" y="164" width="124" height="66.5"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gSA-rf-ef2" userLabel="保证金iv">
-                                <rect key="frame" x="247.5" y="120" width="127.5" height="66.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auction_deposit_note" translatesAutoresizingMaskIntoConstraints="NO" id="gSA-rf-ef2" userLabel="保证金iv">
+                                <rect key="frame" x="247.5" y="164" width="127.5" height="66.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车源预告" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUT-SN-fgL" userLabel="车源预告lab">
-                                <rect key="frame" x="0.0" y="186.5" width="124" height="33.5"/>
+                                <rect key="frame" x="0.0" y="230.5" width="124" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -201,7 +213,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成交记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDc-Lx-OlO" userLabel="成交记录lab">
-                                <rect key="frame" x="124" y="186.5" width="127.5" height="33.5"/>
+                                <rect key="frame" x="124" y="230.5" width="127.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -210,7 +222,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="保证金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-oH-xxl" userLabel="保证金lab">
-                                <rect key="frame" x="247.5" y="186.5" width="127.5" height="33.5"/>
+                                <rect key="frame" x="247.5" y="230.5" width="127.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -221,7 +233,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s0U-vq-7xj" secondAttribute="trailing" id="15D-EQ-DlD"/>
                             <constraint firstItem="s0U-vq-7xj" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.34" id="1T5-I9-5on"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nYR-LM-Lph" secondAttribute="trailing" constant="20" symbolic="YES" id="2CP-vY-14y"/>
                             <constraint firstItem="Qbh-oH-xxl" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.66" id="2zY-Wt-61i"/>
                             <constraint firstItem="9TY-4p-hyA" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="4Du-1u-clS"/>
                             <constraint firstItem="gSA-rf-ef2" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.66" id="5pt-i1-ekE"/>
@@ -231,6 +245,7 @@
                             <constraint firstItem="yCo-dV-6yI" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="8Gz-xh-EUu"/>
                             <constraint firstItem="yCo-dV-6yI" firstAttribute="top" secondItem="EAz-31-WeR" secondAttribute="bottom" id="Bhb-TL-uyR"/>
                             <constraint firstItem="VXV-qf-KZh" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="Cci-YT-SAY"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kUT-SN-fgL" secondAttribute="trailing" constant="20" symbolic="YES" id="D9L-dh-pZH"/>
                             <constraint firstItem="EAz-31-WeR" firstAttribute="top" secondItem="9TY-4p-hyA" secondAttribute="bottom" id="E50-NM-7b0"/>
                             <constraint firstItem="Qbh-oH-xxl" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.05" id="EhI-k9-HkW"/>
                             <constraint firstItem="yCo-dV-6yI" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="leading" id="FIP-zz-z4L"/>
@@ -244,6 +259,7 @@
                             <constraint firstItem="9TY-4p-hyA" firstAttribute="top" secondItem="xpt-Db-O91" secondAttribute="top" id="PQV-HT-otr"/>
                             <constraint firstItem="qE9-AM-96d" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="QSB-yN-qDs"/>
                             <constraint firstItem="9TY-4p-hyA" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="Rg2-th-Pi7"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qbh-oH-xxl" secondAttribute="trailing" id="U4j-cy-rVQ"/>
                             <constraint firstItem="gSA-rf-ef2" firstAttribute="top" secondItem="s0U-vq-7xj" secondAttribute="bottom" id="XP6-ZY-YQm"/>
                             <constraint firstItem="iU7-WR-qJR" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.1" id="ZG6-kC-Iin"/>
                             <constraint firstItem="VXV-qf-KZh" firstAttribute="top" secondItem="nYR-LM-Lph" secondAttribute="bottom" id="a4z-sH-Tac"/>
@@ -262,8 +278,10 @@
                             <constraint firstItem="nYR-LM-Lph" firstAttribute="top" secondItem="iU7-WR-qJR" secondAttribute="bottom" id="nkf-oc-hxf"/>
                             <constraint firstItem="iU7-WR-qJR" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="pJc-6N-wBJ"/>
                             <constraint firstItem="s0U-vq-7xj" firstAttribute="height" secondItem="rcR-bp-bcq" secondAttribute="height" multiplier="0.05" id="qor-kz-OD6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EAz-31-WeR" secondAttribute="trailing" constant="20" symbolic="YES" id="rUq-P5-TAD"/>
                             <constraint firstItem="VXV-qf-KZh" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="sVv-e3-EK1"/>
                             <constraint firstItem="Qbh-oH-xxl" firstAttribute="top" secondItem="gSA-rf-ef2" secondAttribute="bottom" id="slo-y3-cY8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hDc-Lx-OlO" secondAttribute="trailing" constant="20" symbolic="YES" id="sx5-OB-apy"/>
                             <constraint firstItem="EAz-31-WeR" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.33" id="ufT-Ie-n3T"/>
                             <constraint firstItem="hDc-Lx-OlO" firstAttribute="width" secondItem="rcR-bp-bcq" secondAttribute="width" multiplier="0.34" id="uyn-lb-cV5"/>
                             <constraint firstItem="nYR-LM-Lph" firstAttribute="leading" secondItem="xpt-Db-O91" secondAttribute="trailing" multiplier="0.33" id="yCp-NY-JOH"/>
@@ -275,6 +293,16 @@
                     <tabBarItem key="tabBarItem" title="拍卖" image="navi_auction_no" selectedImage="navi_auction_yes" id="115-wd-RzH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xq-D3-I8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZW9-kN-a3D" userLabel="fastAuctionIVGR">
+                    <connections>
+                        <segue destination="KxE-BO-ml1" kind="show" id="Wom-of-UW7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uU2-Cm-j4V" userLabel="fastAuctionLabGR">
+                    <connections>
+                        <segue destination="KxE-BO-ml1" kind="show" id="CHA-uH-PQa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="876" y="2103.5982008995502"/>
         </scene>
@@ -314,10 +342,21 @@
         <scene sceneID="TW7-CS-2oJ">
             <objects>
                 <tabBarController title="主窗口" id="bXC-aF-SS2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="名诚汽车" id="spk-Zj-aed">
+                        <barButtonItem key="leftBarButtonItem" title="贵阳" id="ZRu-Vt-SRz">
+                            <color key="tintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="add" id="jKi-6Y-Bbs"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JTq-go-WRO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.92156862745098034" green="0.33333333333333331" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.92156862745098034" green="0.33333333333333331" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="icC-bA-xBy" kind="relationship" relationship="viewControllers" id="f3H-mr-dpb"/>
@@ -340,7 +379,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eca-Wg-Npq">
-                                <rect key="frame" x="24" y="126.5" width="327" height="30"/>
+                                <rect key="frame" x="24" y="82.5" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" textContentType="tel"/>
@@ -349,7 +388,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码(6-16位)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cAW-V8-W0l">
-                                <rect key="frame" x="24" y="180.5" width="327" height="30"/>
+                                <rect key="frame" x="24" y="136.5" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
@@ -358,7 +397,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="重复密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r2b-nT-szD">
-                                <rect key="frame" x="24" y="234.5" width="327" height="30"/>
+                                <rect key="frame" x="24" y="190.5" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
@@ -367,7 +406,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ah-5c-iTH">
-                                <rect key="frame" x="24" y="342" width="327" height="30"/>
+                                <rect key="frame" x="24" y="298" width="327" height="30"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.33333333329999998" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -378,13 +417,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人账号注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-EA-oAF">
-                                <rect key="frame" x="24" y="88" width="327" height="14.5"/>
+                                <rect key="frame" x="24" y="44" width="327" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZH-Hq-ZAe">
-                                <rect key="frame" x="200" y="288.5" width="151" height="29"/>
+                                <rect key="frame" x="200" y="244.5" width="151" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="点击获取验证码"/>
                                 <connections>
@@ -392,7 +431,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码(6位)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lYj-Xe-cFO">
-                                <rect key="frame" x="24" y="288" width="151" height="30"/>
+                                <rect key="frame" x="24" y="244" width="151" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" secureTextEntry="YES" textContentType="tel"/>
@@ -443,10 +482,10 @@
             </objects>
             <point key="canvasLocation" x="1471.2" y="688.60569715142435"/>
         </scene>
-        <!--登陆注册-->
+        <!--根导航-->
         <scene sceneID="822-OE-Ejv">
             <objects>
-                <navigationController title="登陆注册" automaticallyAdjustsScrollViewInsets="NO" id="Jj0-kU-eyh" sceneMemberID="viewController">
+                <navigationController title="根导航" automaticallyAdjustsScrollViewInsets="NO" id="Jj0-kU-eyh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sfa-Hf-5zE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -457,15 +496,37 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ncs-Od-ySq"/>
+                        <segue destination="bXC-aF-SS2" kind="relationship" relationship="rootViewController" id="NAj-W7-hkv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxu-FK-KO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21.600000000000001" y="688.60569715142435"/>
+            <point key="canvasLocation" x="22" y="689"/>
+        </scene>
+        <!--急速竞拍-->
+        <scene sceneID="qag-M5-SfL">
+            <objects>
+                <viewController title="急速竞拍" id="KxE-BO-ml1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dEa-a8-U14">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="R11-eU-Bol"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rq2-LD-EJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="2104"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="30" height="30"/>
+        <image name="auction_advance_notice" width="30" height="30"/>
+        <image name="auction_auctioned_note" width="30" height="30"/>
+        <image name="auction_deposit_note" width="30" height="30"/>
+        <image name="auction_fast_auction" width="30" height="30"/>
+        <image name="auction_free_bid" width="30" height="30"/>
+        <image name="auction_special_auction" width="30" height="30"/>
         <image name="navi_auction_no" width="30" height="30"/>
         <image name="navi_auction_yes" width="30" height="30"/>
         <image name="navi_buycar_no" width="30" height="30"/>
@@ -477,4 +538,7 @@
         <image name="navi_user_no" width="30" height="30"/>
         <image name="navi_user_yes" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wom-of-UW7"/>
+    </inferredMetricsTieBreakers>
 </document>

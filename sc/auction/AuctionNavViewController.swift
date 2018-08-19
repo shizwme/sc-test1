@@ -1,21 +1,18 @@
 //
-//  AuctionViewController.swift
+//  AuctionNavViewController.swift
 //  sc
 //
-//  Created by Mac on 2018/8/15.
+//  Created by Mac on 2018/8/19.
 //  Copyright © 2018年 ajmc. All rights reserved.
 //
 
 import UIKit
 
-class AuctionViewController: UIViewController {
-    
-    
-    
+class AuctionNavViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("AuctionNavViewController");
         // Do any additional setup after loading the view.
     }
 
@@ -24,7 +21,14 @@ class AuctionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+//    @IBAction func fastAuctionIVClick(_ sender: UITapGestureRecognizer) {
+        //实例化目标controller
+//        var viewController = self.storyboard?.instantiateViewController(withIdentifier: "id") as UIViewController;
+        //跳转
+//        self.navigationController?.showDetailViewController(ViewController, sender: nil);
+//    }
+    
+    
     /*
     // MARK: - Navigation
 
