@@ -171,7 +171,7 @@ class RegisterViewController: UIViewController {
             playActivityIndicator();
             
             let parameters: Parameters = [
-                "token": "123",
+                "token": (DeviceUtil.getInstance().getIDFV() + "0").md5(),
                 "uid": 0,
                 "t": 3,
                 "mobile": mobileTextField.text!,

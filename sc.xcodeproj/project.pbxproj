@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04001C31212A699800377015 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C30212A699800377015 /* BaseViewController.swift */; };
+		04001C3A212A6B2400377015 /* AuctionFastAuctionListViewControllerTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C39212A6B2400377015 /* AuctionFastAuctionListViewControllerTemp.swift */; };
+		04001C3C212A96C200377015 /* PreferenceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C3B212A96C200377015 /* PreferenceUtil.swift */; };
+		04001C3E212A96DB00377015 /* PListUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C3D212A96DB00377015 /* PListUtil.swift */; };
+		04001C40212AA33A00377015 /* DeviceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C3F212AA33A00377015 /* DeviceUtil.swift */; };
+		04001C43212ABEF800377015 /* HomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C42212ABEF800377015 /* HomeNavViewController.swift */; };
+		04001C46212BE3E800377015 /* AlamofireUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C45212BE3E800377015 /* AlamofireUtil.swift */; };
+		04001C48212C5C5000377015 /* AuctionFastAuctionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C47212C5C5000377015 /* AuctionFastAuctionListTableViewController.swift */; };
+		04001C4A212C5DD300377015 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04001C49212C5DD300377015 /* BaseTableViewController.swift */; };
 		04B978C72122C9C90054D708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B978C62122C9C90054D708 /* AppDelegate.swift */; };
 		04B978C92122C9C90054D708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B978C82122C9C90054D708 /* ViewController.swift */; };
 		04B978CC2122C9C90054D708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B978CA2122C9C90054D708 /* Main.storyboard */; };
@@ -102,6 +111,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04001C30212A699800377015 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		04001C39212A6B2400377015 /* AuctionFastAuctionListViewControllerTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionFastAuctionListViewControllerTemp.swift; sourceTree = "<group>"; };
+		04001C3B212A96C200377015 /* PreferenceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceUtil.swift; sourceTree = "<group>"; };
+		04001C3D212A96DB00377015 /* PListUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListUtil.swift; sourceTree = "<group>"; };
+		04001C3F212AA33A00377015 /* DeviceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtil.swift; sourceTree = "<group>"; };
+		04001C42212ABEF800377015 /* HomeNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavViewController.swift; sourceTree = "<group>"; };
+		04001C45212BE3E800377015 /* AlamofireUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireUtil.swift; sourceTree = "<group>"; };
+		04001C47212C5C5000377015 /* AuctionFastAuctionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionFastAuctionListTableViewController.swift; sourceTree = "<group>"; };
+		04001C49212C5DD300377015 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		04B978C32122C9C90054D708 /* sc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B978C62122C9C90054D708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B978C82122C9C90054D708 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +160,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04001C41212ABEE000377015 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				04001C42212ABEF800377015 /* HomeNavViewController.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		04001C44212BE3A700377015 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				04001C45212BE3E800377015 /* AlamofireUtil.swift */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
 		04B978BA2122C9C90054D708 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +198,8 @@
 		04B978C52122C9C90054D708 /* sc */ = {
 			isa = PBXGroup;
 			children = (
+				04001C44212BE3A700377015 /* http */,
+				04001C41212ABEE000377015 /* home */,
 				04D02F4B21241CA6004EF8C4 /* auction */,
 				04C1F2ED21233018006F6D7A /* oc */,
 				04C1F2EC212329EC006F6D7A /* constant */,
@@ -177,6 +213,8 @@
 				04B978CD2122C9C90054D708 /* sc.xcdatamodeld */,
 				04B978DB2122E8CD0054D708 /* LoginViewController.swift */,
 				04B978DD2122E8E10054D708 /* RegisterViewController.swift */,
+				04001C30212A699800377015 /* BaseViewController.swift */,
+				04001C49212C5DD300377015 /* BaseTableViewController.swift */,
 			);
 			path = sc;
 			sourceTree = "<group>";
@@ -186,6 +224,9 @@
 			children = (
 				04C1F2A02123098B006F6D7A /* RegexUtil.swift */,
 				04D02F3B2123E33C004EF8C4 /* Encrypt.swift */,
+				04001C3B212A96C200377015 /* PreferenceUtil.swift */,
+				04001C3D212A96DB00377015 /* PListUtil.swift */,
+				04001C3F212AA33A00377015 /* DeviceUtil.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -260,6 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				04D02F4E2129AC37004EF8C4 /* AuctionNavViewController.swift */,
+				04001C39212A6B2400377015 /* AuctionFastAuctionListViewControllerTemp.swift */,
+				04001C47212C5C5000377015 /* AuctionFastAuctionListTableViewController.swift */,
 			);
 			path = auction;
 			sourceTree = "<group>";
@@ -399,14 +442,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04001C3C212A96C200377015 /* PreferenceUtil.swift in Sources */,
+				04001C3A212A6B2400377015 /* AuctionFastAuctionListViewControllerTemp.swift in Sources */,
+				04001C3E212A96DB00377015 /* PListUtil.swift in Sources */,
+				04001C43212ABEF800377015 /* HomeNavViewController.swift in Sources */,
 				04D02F4F2129AC37004EF8C4 /* AuctionNavViewController.swift in Sources */,
 				04B978DC2122E8CD0054D708 /* LoginViewController.swift in Sources */,
+				04001C31212A699800377015 /* BaseViewController.swift in Sources */,
 				04B978DE2122E8E10054D708 /* RegisterViewController.swift in Sources */,
+				04001C4A212C5DD300377015 /* BaseTableViewController.swift in Sources */,
 				04C1F2EB212329E2006F6D7A /* AppConstant.swift in Sources */,
+				04001C40212AA33A00377015 /* DeviceUtil.swift in Sources */,
 				04D02F3C2123E33C004EF8C4 /* Encrypt.swift in Sources */,
 				04B978C92122C9C90054D708 /* ViewController.swift in Sources */,
 				04D02F332123E2D3004EF8C4 /* NSObject+MD5Util.m in Sources */,
+				04001C48212C5C5000377015 /* AuctionFastAuctionListTableViewController.swift in Sources */,
 				04C1F2A12123098B006F6D7A /* RegexUtil.swift in Sources */,
+				04001C46212BE3E800377015 /* AlamofireUtil.swift in Sources */,
 				04B978CF2122C9C90054D708 /* sc.xcdatamodeld in Sources */,
 				04B978C72122C9C90054D708 /* AppDelegate.swift in Sources */,
 			);

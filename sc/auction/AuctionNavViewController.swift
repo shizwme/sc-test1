@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import Alamofire
 
-class AuctionNavViewController: UIViewController {
-
+class AuctionNavViewController: BaseViewController {
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true);
+        print(path);
+        
+        path = NSSearchPathForDirectoriesInDomains(.preferencePanesDirectory, .userDomainMask, true);
+        print(path);
+        
         print("AuctionNavViewController");
         // Do any additional setup after loading the view.
     }

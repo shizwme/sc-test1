@@ -9,13 +9,11 @@
 import UIKit
 import Alamofire
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     @IBOutlet var mobileTextField: UITextField!;
     
     @IBOutlet var passwordTextField: UITextField!;
-    
-    var activityIndicator:UIActivityIndicatorView!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,8 +59,8 @@ class LoginViewController: UIViewController {
             playActivityIndicator();
             
             let parameters: Parameters = [
-                "token": "123",
-                "uid": 0,
+                "token": getToken(),
+                "uid": getUserId(),
                 "t": 3,
                 "mobile": mobileTextField.text!,
                 "password": passwordTextField.text!.md5()
@@ -86,7 +84,21 @@ class LoginViewController: UIViewController {
                         let flag = result.value(forKey: "flag") as? Int;
                         let msg = result.value(forKey: "msg") as? String;
                         if flag! > 0{
+                            if let user = result.value(forKey: "user") as? NSDictionary{
+                                if PListUtil.getInstance().setDictionary(filePath: self.documentsPath + "/" + AppConstant.userFileNamePList, dictionary: user){}
+                            }
+                            else{
+                                if PListUtil.getInstance().setDictionary(filePath: self.documentsPath + "/" + AppConstant.userFileNamePList, dictionary: NSDictionary()){}
+                            }
                             
+                            if let merchant = result.value(forKey: "merchant") as? NSDictionary{
+                                if PListUtil.getInstance().setDictionary(filePath: self.documentsPath + "/" + AppConstant.merchantFileNamePList, dictionary: merchant){}
+                            }
+                            else{
+                                if PListUtil.getInstance().setDictionary(filePath: self.documentsPath + "/" + AppConstant.merchantFileNamePList, dictionary: NSDictionary()){}
+                            }
+                            
+                            self.navigationController?.popViewController(animated: true);
                         }
                         else{
                             let alertController = UIAlertController(title: "提示", message: msg, preferredStyle:UIAlertControllerStyle.alert);
@@ -124,22 +136,6 @@ class LoginViewController: UIViewController {
         }
         
         return true;
-    }
-
-    func creatActivityIndicator(){
-        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle:UIActivityIndicatorViewStyle.gray)
-        activityIndicator.center = self.view.center
-        self.view.addSubview(activityIndicator)
-    }
-    
-    func playActivityIndicator(){
-        //进度条开始转动
-        activityIndicator.startAnimating()
-    }
-    
-    func stopActivityIndicator() {
-        //进度条停止转动
-        activityIndicator.stopAnimating()
     }
     
     /*
