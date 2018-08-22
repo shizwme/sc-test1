@@ -28,6 +28,10 @@
 		04C1F2E621232794006F6D7A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C1F2D921232717006F6D7A /* Alamofire.framework */; };
 		04C1F2E721232794006F6D7A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04C1F2D921232717006F6D7A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04C1F2EB212329E2006F6D7A /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1F2EA212329E2006F6D7A /* AppConstant.swift */; };
+		04CDECB8212D4ED10072B95C /* CarDataBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDECB7212D4ED10072B95C /* CarDataBean.swift */; };
+		04CDECBA212D5D6D0072B95C /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDECB9212D5D6D0072B95C /* BaseObject.swift */; };
+		04CDECBC212D6A690072B95C /* PageBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDECBB212D6A690072B95C /* PageBean.swift */; };
+		04CDECBE212D71510072B95C /* DateFormatterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDECBD212D71510072B95C /* DateFormatterUtil.swift */; };
 		04D02F332123E2D3004EF8C4 /* NSObject+MD5Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D02F322123E2D3004EF8C4 /* NSObject+MD5Util.m */; };
 		04D02F3C2123E33C004EF8C4 /* Encrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D02F3B2123E33C004EF8C4 /* Encrypt.swift */; };
 		04D02F422123F1B3004EF8C4 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D02F3F2123F1B3004EF8C4 /* SMS_SDK.framework */; };
@@ -133,6 +137,10 @@
 		04C1F2A02123098B006F6D7A /* RegexUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexUtil.swift; sourceTree = "<group>"; };
 		04C1F2CD21232717006F6D7A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		04C1F2EA212329E2006F6D7A /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		04CDECB7212D4ED10072B95C /* CarDataBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataBean.swift; sourceTree = "<group>"; };
+		04CDECB9212D5D6D0072B95C /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
+		04CDECBB212D6A690072B95C /* PageBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBean.swift; sourceTree = "<group>"; };
+		04CDECBD212D71510072B95C /* DateFormatterUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterUtil.swift; sourceTree = "<group>"; };
 		04D02F302123E2D3004EF8C4 /* sc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sc-Bridging-Header.h"; sourceTree = "<group>"; };
 		04D02F312123E2D3004EF8C4 /* NSObject+MD5Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MD5Util.h"; sourceTree = "<group>"; };
 		04D02F322123E2D3004EF8C4 /* NSObject+MD5Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MD5Util.m"; sourceTree = "<group>"; };
@@ -198,6 +206,7 @@
 		04B978C52122C9C90054D708 /* sc */ = {
 			isa = PBXGroup;
 			children = (
+				04CDECAF212D4EB60072B95C /* bean */,
 				04001C44212BE3A700377015 /* http */,
 				04001C41212ABEE000377015 /* home */,
 				04D02F4B21241CA6004EF8C4 /* auction */,
@@ -215,6 +224,7 @@
 				04B978DD2122E8E10054D708 /* RegisterViewController.swift */,
 				04001C30212A699800377015 /* BaseViewController.swift */,
 				04001C49212C5DD300377015 /* BaseTableViewController.swift */,
+				04CDECB9212D5D6D0072B95C /* BaseObject.swift */,
 			);
 			path = sc;
 			sourceTree = "<group>";
@@ -227,6 +237,7 @@
 				04001C3B212A96C200377015 /* PreferenceUtil.swift */,
 				04001C3D212A96DB00377015 /* PListUtil.swift */,
 				04001C3F212AA33A00377015 /* DeviceUtil.swift */,
+				04CDECBD212D71510072B95C /* DateFormatterUtil.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -261,6 +272,15 @@
 				04D02F302123E2D3004EF8C4 /* sc-Bridging-Header.h */,
 			);
 			path = oc;
+			sourceTree = "<group>";
+		};
+		04CDECAF212D4EB60072B95C /* bean */ = {
+			isa = PBXGroup;
+			children = (
+				04CDECB7212D4ED10072B95C /* CarDataBean.swift */,
+				04CDECBB212D6A690072B95C /* PageBean.swift */,
+			);
+			path = bean;
 			sourceTree = "<group>";
 		};
 		04D02F3D2123F1B3004EF8C4 /* SDK */ = {
@@ -444,18 +464,22 @@
 			files = (
 				04001C3C212A96C200377015 /* PreferenceUtil.swift in Sources */,
 				04001C3A212A6B2400377015 /* AuctionFastAuctionListViewControllerTemp.swift in Sources */,
+				04CDECBE212D71510072B95C /* DateFormatterUtil.swift in Sources */,
 				04001C3E212A96DB00377015 /* PListUtil.swift in Sources */,
 				04001C43212ABEF800377015 /* HomeNavViewController.swift in Sources */,
 				04D02F4F2129AC37004EF8C4 /* AuctionNavViewController.swift in Sources */,
 				04B978DC2122E8CD0054D708 /* LoginViewController.swift in Sources */,
+				04CDECBC212D6A690072B95C /* PageBean.swift in Sources */,
 				04001C31212A699800377015 /* BaseViewController.swift in Sources */,
 				04B978DE2122E8E10054D708 /* RegisterViewController.swift in Sources */,
 				04001C4A212C5DD300377015 /* BaseTableViewController.swift in Sources */,
 				04C1F2EB212329E2006F6D7A /* AppConstant.swift in Sources */,
 				04001C40212AA33A00377015 /* DeviceUtil.swift in Sources */,
+				04CDECBA212D5D6D0072B95C /* BaseObject.swift in Sources */,
 				04D02F3C2123E33C004EF8C4 /* Encrypt.swift in Sources */,
 				04B978C92122C9C90054D708 /* ViewController.swift in Sources */,
 				04D02F332123E2D3004EF8C4 /* NSObject+MD5Util.m in Sources */,
+				04CDECB8212D4ED10072B95C /* CarDataBean.swift in Sources */,
 				04001C48212C5C5000377015 /* AuctionFastAuctionListTableViewController.swift in Sources */,
 				04C1F2A12123098B006F6D7A /* RegexUtil.swift in Sources */,
 				04001C46212BE3E800377015 /* AlamofireUtil.swift in Sources */,

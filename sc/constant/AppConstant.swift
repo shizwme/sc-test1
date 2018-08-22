@@ -25,3 +25,11 @@ public class PreferenceConstant{
     static let appearanceO : String! = "appearanceO";
     static let appearanceN : String! = "appearanceN";
 }
+public class PathConstant{
+    static let specialAuctionPath : String! = "carData/fauctionListCarData";
+    static let fastAuctionPath : String! = "carData/fauctionListCarDataFastAuction";
+    static let freeBidPath : String! = "carData/ffreeBidCarDataList";
+    static let buyCarPath : String! = "carData/fcarDataSaleList";
+    
+    static let carDataImagePath : String! = "image/car/";
+}

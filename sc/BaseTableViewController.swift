@@ -47,7 +47,7 @@ class BaseTableViewController: UITableViewController {
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
                 //解析数据
-                if self.parseJson(josnStr: json){}
+                if self.parseJson(json: json){}
             }
             
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
@@ -56,7 +56,17 @@ class BaseTableViewController: UITableViewController {
         };
     }
     
-    func parseJson(josnStr : Any) -> Bool {
+    func getImageData(url : String, image : UIImageView) {
+        print("获取图片：\(url)");
+        Alamofire.request(url).responseData {
+            response in
+            if let d = response.result.value{
+                image.image = UIImage(data: d);
+            }
+        };
+    }
+    
+    func parseJson(json : Any) -> Bool {
         return false;
     }
     
@@ -100,7 +110,7 @@ class BaseTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -111,7 +121,7 @@ class BaseTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
