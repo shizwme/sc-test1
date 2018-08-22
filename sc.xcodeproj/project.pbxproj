@@ -28,6 +28,10 @@
 		04C1F2E621232794006F6D7A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C1F2D921232717006F6D7A /* Alamofire.framework */; };
 		04C1F2E721232794006F6D7A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04C1F2D921232717006F6D7A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04C1F2EB212329E2006F6D7A /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1F2EA212329E2006F6D7A /* AppConstant.swift */; };
+		04CA18F5212DCA38001D4A28 /* WRProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA18EA212DCA37001D4A28 /* WRProxy.swift */; };
+		04CA18F6212DCA38001D4A28 /* WRPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA18EB212DCA37001D4A28 /* WRPageControl.swift */; };
+		04CA18F7212DCA38001D4A28 /* WRCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA18EC212DCA37001D4A28 /* WRCycleScrollView.swift */; };
+		04CA18F8212DCA38001D4A28 /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA18ED212DCA37001D4A28 /* WRCycleCell.swift */; };
 		04CDECB8212D4ED10072B95C /* CarDataBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDECB7212D4ED10072B95C /* CarDataBean.swift */; };
 		04CDECBA212D5D6D0072B95C /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDECB9212D5D6D0072B95C /* BaseObject.swift */; };
 		04CDECBC212D6A690072B95C /* PageBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDECBB212D6A690072B95C /* PageBean.swift */; };
@@ -137,6 +141,10 @@
 		04C1F2A02123098B006F6D7A /* RegexUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexUtil.swift; sourceTree = "<group>"; };
 		04C1F2CD21232717006F6D7A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		04C1F2EA212329E2006F6D7A /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		04CA18EA212DCA37001D4A28 /* WRProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRProxy.swift; sourceTree = "<group>"; };
+		04CA18EB212DCA37001D4A28 /* WRPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRPageControl.swift; sourceTree = "<group>"; };
+		04CA18EC212DCA37001D4A28 /* WRCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleScrollView.swift; sourceTree = "<group>"; };
+		04CA18ED212DCA37001D4A28 /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
 		04CDECB7212D4ED10072B95C /* CarDataBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataBean.swift; sourceTree = "<group>"; };
 		04CDECB9212D5D6D0072B95C /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
 		04CDECBB212D6A690072B95C /* PageBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageBean.swift; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 		04B978BA2122C9C90054D708 = {
 			isa = PBXGroup;
 			children = (
+				04CA18E9212DCA37001D4A28 /* WRCycleScrollView */,
 				04D02F3D2123F1B3004EF8C4 /* SDK */,
 				04B978C52122C9C90054D708 /* sc */,
 				04B978C42122C9C90054D708 /* Products */,
@@ -272,6 +281,17 @@
 				04D02F302123E2D3004EF8C4 /* sc-Bridging-Header.h */,
 			);
 			path = oc;
+			sourceTree = "<group>";
+		};
+		04CA18E9212DCA37001D4A28 /* WRCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				04CA18EA212DCA37001D4A28 /* WRProxy.swift */,
+				04CA18EB212DCA37001D4A28 /* WRPageControl.swift */,
+				04CA18EC212DCA37001D4A28 /* WRCycleScrollView.swift */,
+				04CA18ED212DCA37001D4A28 /* WRCycleCell.swift */,
+			);
+			path = WRCycleScrollView;
 			sourceTree = "<group>";
 		};
 		04CDECAF212D4EB60072B95C /* bean */ = {
@@ -465,6 +485,8 @@
 				04001C3C212A96C200377015 /* PreferenceUtil.swift in Sources */,
 				04001C3A212A6B2400377015 /* AuctionFastAuctionListViewControllerTemp.swift in Sources */,
 				04CDECBE212D71510072B95C /* DateFormatterUtil.swift in Sources */,
+				04CA18F5212DCA38001D4A28 /* WRProxy.swift in Sources */,
+				04CA18F8212DCA38001D4A28 /* WRCycleCell.swift in Sources */,
 				04001C3E212A96DB00377015 /* PListUtil.swift in Sources */,
 				04001C43212ABEF800377015 /* HomeNavViewController.swift in Sources */,
 				04D02F4F2129AC37004EF8C4 /* AuctionNavViewController.swift in Sources */,
@@ -474,6 +496,7 @@
 				04B978DE2122E8E10054D708 /* RegisterViewController.swift in Sources */,
 				04001C4A212C5DD300377015 /* BaseTableViewController.swift in Sources */,
 				04C1F2EB212329E2006F6D7A /* AppConstant.swift in Sources */,
+				04CA18F7212DCA38001D4A28 /* WRCycleScrollView.swift in Sources */,
 				04001C40212AA33A00377015 /* DeviceUtil.swift in Sources */,
 				04CDECBA212D5D6D0072B95C /* BaseObject.swift in Sources */,
 				04D02F3C2123E33C004EF8C4 /* Encrypt.swift in Sources */,
@@ -485,6 +508,7 @@
 				04001C46212BE3E800377015 /* AlamofireUtil.swift in Sources */,
 				04B978CF2122C9C90054D708 /* sc.xcdatamodeld in Sources */,
 				04B978C72122C9C90054D708 /* AppDelegate.swift in Sources */,
+				04CA18F6212DCA38001D4A28 /* WRPageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

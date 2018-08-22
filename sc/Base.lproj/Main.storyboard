@@ -401,6 +401,79 @@
             </objects>
             <point key="canvasLocation" x="1757.5999999999999" y="2103.5982008995502"/>
         </scene>
+        <!--竞拍车辆详情容器页-->
+        <scene sceneID="rV2-0A-bYE">
+            <objects>
+                <viewController id="Bqr-T2-rej" userLabel="竞拍车辆详情容器页" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XWL-Al-Lxc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ViE-AP-07P">
+                                <rect key="frame" x="127" y="44" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-Mx-b8A">
+                                <rect key="frame" x="67" y="182" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Kem-Ls-eW8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1v-uV-qLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="2104"/>
+        </scene>
+        <!--竞拍车辆信息-->
+        <scene sceneID="dAe-hp-SC1">
+            <objects>
+                <viewController id="s3W-EV-biE" userLabel="竞拍车辆信息" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2lR-ue-RDF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SP-NC-Efb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="bTc-Lg-vXg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LFb-wM-ojY" firstAttribute="trailing" secondItem="6SP-NC-Efb" secondAttribute="trailing" id="6qB-fX-W4t"/>
+                            <constraint firstItem="6SP-NC-Efb" firstAttribute="top" secondItem="LFb-wM-ojY" secondAttribute="top" id="Lhn-4B-DZQ"/>
+                            <constraint firstItem="6SP-NC-Efb" firstAttribute="leading" secondItem="LFb-wM-ojY" secondAttribute="leading" id="cDV-94-dgk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LFb-wM-ojY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REW-ZZ-XVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3380" y="2460"/>
+        </scene>
+        <!--竞拍车辆检测报告-->
+        <scene sceneID="JlK-et-UBv">
+            <objects>
+                <viewController id="0CO-d5-cqB" userLabel="竞拍车辆检测报告" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EQo-hW-K6M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GJi-ij-idc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tZ-o0-KTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3380" y="1706"/>
+        </scene>
         <!--卖车-->
         <scene sceneID="K2p-RS-2rv">
             <objects>
