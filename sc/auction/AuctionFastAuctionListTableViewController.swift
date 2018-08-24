@@ -18,14 +18,19 @@ class AuctionFastAuctionListTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self;
-        tableView.delegate = self;
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //实例化目标controller
+//        var viewController = self.storyboard?.instantiateViewController(withIdentifier: "auctionCarDetailContainerViewController") as! UIViewController;
+        //跳转
+//        self.navigationController?.showDetailViewController(viewController, sender: nil);
     }
     
     override func viewDidAppear(_ animated: Bool) {
