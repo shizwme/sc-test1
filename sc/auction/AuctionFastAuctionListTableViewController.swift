@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Kingfisher
 
 class AuctionFastAuctionListTableViewController: BaseTableViewController {
     
@@ -17,7 +18,6 @@ class AuctionFastAuctionListTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,13 +31,17 @@ class AuctionFastAuctionListTableViewController: BaseTableViewController {
 //        var viewController = self.storyboard?.instantiateViewController(withIdentifier: "auctionCarDetailContainerViewController") as! UIViewController;
         //跳转
 //        self.navigationController?.showDetailViewController(viewController, sender: nil);
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate;
+        //delegate.trans!["carData"] = carDataArray![indexPath.row];
+        delegate.trans?.updateValue(carDataArray![indexPath.row], forKey: "carData");
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let d : NSDictionary = ["pageNow" : (pageBean != nil ? pageBean!.pageNumber! + 1 : 1)];
         initParam(params: d);
         
-        getHttpJSONData(url: AppConstant.baseUrl + PathConstant.buyCarPath,
+        getHttpJSONData(url: AppConstant.baseUrl + PathConstant.fastAuctionPath,
                         method: HTTPMethod.get, parameters: alamofireParameters);
     }
     
@@ -45,9 +49,9 @@ class AuctionFastAuctionListTableViewController: BaseTableViewController {
         print("解析数据");
         if let resultD  = json as? NSDictionary{
             let carList = resultD.value(forKey: "list") as! NSArray;
-            let page = resultD.value(forKey: "page") as! NSDictionary;
+            //let page = resultD.value(forKey: "page") as! NSDictionary;
             
-            self.pageBean = PageBean.parseObject(dict: page);
+            self.pageBean = PageBean.parseObject(dict: resultD);
             self.carDataArray = CarDataBean.parseArray(array: carList);
             
             self.tableView.reloadData();
@@ -90,11 +94,19 @@ class AuctionFastAuctionListTableViewController: BaseTableViewController {
         let item = self.carDataArray![indexPath.row];
         
         //logo.image = UIImage(named: "auction_deposit_note");
-        getImageData(url: "\(AppConstant.baseUrl!)\(PathConstant.carDataImagePath!)\(item.id ?? 0)/\(item.logo ?? "")", image : logo);
+//        getImageData(url: "\(AppConstant.baseUrl!)\(PathConstant.carDataImagePath!)\(item.id ?? 0)/\(item.logo ?? "")", image : logo);
+        logo.kf.setImage(with: ImageResource(
+            downloadURL: URL(string: "\(AppConstant.baseUrl!)\(PathConstant.carDataImagePath!)\(item.id ?? 0)/\(item.logo ?? "")")!));
         title.text = "\(item.brand_name!)\(item.model!) \(item.volumn!)\(item.gear_box!)";
         condition.text = "\(item.household_dateStr_year!)/\(item.drive_type!)/\(item.mileage!/10000)万公里";
         price.text = "\(Int(item.start_auction_price!/10000)) .x万";
-        date.text = "\(item.auction_end_date!)";
+        
+        if item.auction_start_date! < DateFormatterUtil.getCurrentTime(){
+            date.text = "\(DateFormatterUtil.formatter(pattern: "yyyy-MM-dd HH:mm:ss", time: item.auction_end_date!)) 结束";
+        }
+        else{
+            date.text = "\(DateFormatterUtil.formatter(pattern: "yyyy-MM-dd HH:mm:ss", time: item.auction_start_date!)) 开始";
+        }
         
         return cell;
     }

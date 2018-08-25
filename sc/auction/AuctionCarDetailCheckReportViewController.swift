@@ -7,26 +7,37 @@
 //
 
 import UIKit
+import WebKit
 
-class AuctionCarDetailCheckReportViewController: UIViewController {
+class AuctionCarDetailCheckReportViewController: UIViewController, UIWebViewDelegate {
 
-    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var webView1: WKWebView!;
+    
+    var carData : CarDataBean?;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate;
+        carData = delegate.trans!["carData"] as? CarDataBean;
         
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true);
-        scrollView.contentSize = CGSize(width: 5000, height: 10000);
+        print("加载网页viewDidAppear");
+        webView1.load(URLRequest(url: URL(string: AppConstant.baseUrl + PathConstant.webPath + "android_check_report.jsp?ci=\((carData?.id)!)")!));
+        print("加载网页完毕");
     }
+    
+    
+    
     /*
     // MARK: - Navigation
 

@@ -9,9 +9,6 @@
 import Foundation
 
 class PageBean{
-    var indexEnd : Int?;
-    var indexStart : Int?;
-    var pageIndexCount : Int?;
     var pageNumber : Int?;
     var pageSize : Int?;
     var totalPage : Int?;
@@ -24,8 +21,6 @@ class PageBean{
     class func parseObject(dict : NSDictionary) -> PageBean {
         let page : PageBean = PageBean();
 
-        page.indexEnd = dict.value(forKey: "indexEnd") as? Int;
-        page.indexStart = dict.value(forKey: "indexStart") as? Int;
         page.pageNumber = dict.value(forKey: "pageNumber") as? Int;
         page.pageSize = dict.value(forKey: "pageSize") as? Int;
         page.totalPage = dict.value(forKey: "totalPage") as? Int;

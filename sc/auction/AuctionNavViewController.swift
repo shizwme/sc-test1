@@ -23,6 +23,10 @@ class AuctionNavViewController: BaseViewController {
         print(path);
         
         print("AuctionNavViewController");
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate;
+        print("获取到的docPath：\(String(describing: delegate.trans!["docPath"]))");
+        
         // Do any additional setup after loading the view.
     }
 

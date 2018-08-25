@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    var trans : Dictionary<String, Any>? = Dictionary<String, Any>();
+    
     lazy var documentsPath: String = {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         return paths.first!
@@ -151,6 +153,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Thread.sleep(forTimeInterval: 3.0);
         
         print("沙盒路径：\(documentsPath)");
+        trans!["docPath"] = documentsPath;
 
         getUpdateType();
         

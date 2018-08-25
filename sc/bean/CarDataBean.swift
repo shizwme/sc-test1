@@ -9,6 +9,19 @@
 import Foundation
 
 class CarDataBean{
+    static var brand : NSArray{
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + AppConstant.brandFileNamePList;
+        return PListUtil.getInstance().getArray(filePath : path)!;
+    };
+    static var configureDict : NSArray{
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + AppConstant.carConfigureFileNamePList;
+        return PListUtil.getInstance().getArray(filePath : path)!;
+    }
+    static var appearanceDict : NSArray{
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + AppConstant.carAppearanceFileNamePList;
+        return PListUtil.getInstance().getArray(filePath : path)!;
+    }
+    
     var logo : String?;
     var brand_id : Int?;
     var model : String?;
@@ -49,8 +62,8 @@ class CarDataBean{
     var start_auction_price : Double?;
     var expect_auction_price_high : Double?;
     var expect_auction_price_low : Double?;
-    var auction_start_date : Double?;
-    var auction_end_date : Double?;
+    var auction_start_date : Int?;
+    var auction_end_date : Int?;
     var check_flag : Int?;
     var id : Int?;
     var is_enable : Int?;
@@ -59,8 +72,15 @@ class CarDataBean{
     var is_click : Int?;
     
     var household_dateStr_year : String!;
+    var household_dateStr_year_month : String!;
     var household_dateStr_long : String!;
     var brand_name : String!;
+    
+    var commercial_insurance_end_ymd : String?;
+    var force_insurance_end_ymd : String?;
+    
+    var configure_str : String?;
+    var appearance_str : String?;
     
     class func parseObject(json : Any) -> CarDataBean {
         return parseObject(dict : json as! NSDictionary);
@@ -108,8 +128,8 @@ class CarDataBean{
         carData.start_auction_price = dict.value(forKey: "start_auction_price") as? Double;
         carData.expect_auction_price_high = dict.value(forKey: "expect_auction_price_high") as? Double;
         carData.expect_auction_price_low = dict.value(forKey: "expect_auction_price_low") as? Double;
-        carData.auction_start_date = dict.value(forKey: "auction_start_date") as? Double;
-        carData.auction_end_date = dict.value(forKey: "auction_end_date") as? Double;
+        carData.auction_start_date = dict.value(forKey: "auction_start_date") as? Int;
+        carData.auction_end_date = dict.value(forKey: "auction_end_date") as? Int;
         carData.check_flag = dict.value(forKey: "check_flag") as? Int;
         carData.id = dict.value(forKey: "id") as? Int;
         carData.is_enable = dict.value(forKey: "is_enable") as? Int;
@@ -117,9 +137,14 @@ class CarDataBean{
         carData.delete_date = dict.value(forKey: "delete_date") as? Int;
         
         carData.household_dateStr_year = DateFormatterUtil.formatter(pattern: "yyyy年", time: carData.households_date!);
+        carData.household_dateStr_year_month = DateFormatterUtil.formatter(pattern: "yyyy.MM", time: carData.households_date!);
         carData.household_dateStr_long = DateFormatterUtil.formatter(pattern: "yyyy-MM-dd HH:mm:ss", time: carData.households_date!);
+        carData.commercial_insurance_end_ymd = DateFormatterUtil.formatter(pattern: "yyyy-MM-dd", time: carData.commercial_insurance_end!);
+        carData.force_insurance_end_ymd = DateFormatterUtil.formatter(pattern: "yyyy-MM-dd", time: carData.force_insurance_end!);
         
         carData.brand_name = setBrandName(brandId: carData.brand_id!);
+        carData.appearance_str = setAppearance(appearance: carData.appearance!);
+        carData.configure_str = setConfigure(configure: carData.configure!);
         
         return carData;
     }
@@ -139,8 +164,6 @@ class CarDataBean{
     }
     
     class func setBrandName(brandId : Int) -> String{
-        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + AppConstant.brandFileNamePList;
-        let brand : NSArray = PListUtil.getInstance().getArray(filePath : path)!;
         var brandName = "";
         for item in brand{
             let dict = item as! NSDictionary;
@@ -151,5 +174,35 @@ class CarDataBean{
         }
 
         return brandName;
+    }
+    
+    class func setConfigure(configure : String) -> String {
+        var result : String = "";
+        let cid : [String.SubSequence] = configure.split(separator: ",");
+        for ci in cid{
+            for item in configureDict{
+                let idict = item as! NSDictionary;
+                if Int(ci) == (idict.value(forKey: "id") as! Int){
+                    result += "\(idict.value(forKey: "name")!)  ";
+                }
+            }
+        }
+        
+        return result;
+    }
+    
+    class func setAppearance(appearance : String) -> String {
+        var result : String = "";
+        let cid : [String.SubSequence] = appearance.split(separator: ",");
+        for ci in cid{
+            for item in appearanceDict{
+                let idict = item as! NSDictionary;
+                if Int(ci) == (idict.value(forKey: "id") as! Int){
+                    result += "\(idict.value(forKey: "name")!)  ";
+                }
+            }
+        }
+        
+        return result;
     }
 }

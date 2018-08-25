@@ -30,6 +30,8 @@ public class PathConstant{
     static let fastAuctionPath : String! = "carData/fauctionListCarDataFastAuction";
     static let freeBidPath : String! = "carData/ffreeBidCarDataList";
     static let buyCarPath : String! = "carData/fcarDataSaleList";
-    
+    static let imagePath : String! = "images/fcarImagesList";
     static let carDataImagePath : String! = "image/car/";
+    
+    static let webPath : String! = "android/";
 }
